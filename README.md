@@ -57,3 +57,11 @@ Voici la signature de la fonction :
 `public float RectangleArea( float width, float height )`
 
 _Rappel :  l’aire est une surface, elle représente la superficie de la forme géométrique, soit toute la partie intérieure de la figure._
+
+# Calculer l'âge
+Cette fonction prend en paramètre l'année de naissance d'une personne et doit retourner son âge.
+Pour connaître l'année en cours vous devez utiliser `DateTime.Now.Year` c'est une variable qui vous donne l'année en cours.
+
+Voici la signature de la fonction :
+
+`public int CalculateAge( int birthyear )`

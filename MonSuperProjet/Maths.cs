@@ -49,6 +49,12 @@ namespace MonSuperProjet
 			return width * height;
 		}
 
+		public int CalculateAge( int birthyear )
+        {
+			return DateTime.Now.Year - birthyear;
+
+		}
+
 		public string AddZ( string word )
         {
 			return word + "Z";

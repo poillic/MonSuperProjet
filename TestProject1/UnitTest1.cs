@@ -1,13 +1,14 @@
+using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MonSuperProjet;
 
 namespace TestProject1
 {
     [TestClass]
-    public class UnitTest1
+    public class TestsMaths
     {
         [TestMethod]
-        public void Ex1_ClassVariable()
+        public void A_ClassVariable()
         {
             Maths m = new Maths();
             Assert.AreEqual( 10, m.age );
@@ -17,7 +18,7 @@ namespace TestProject1
         }
 
         [TestMethod]
-        public void Ex2_Add()
+        public void B_Add()
         {
             Maths m = new Maths();
             Assert.AreEqual( 6, m.Add( 4, 2 ) );
@@ -25,7 +26,7 @@ namespace TestProject1
         }
 
         [TestMethod]
-        public void Ex3_Substract()
+        public void C_Substract()
         {
             Maths m = new Maths();
             Assert.AreEqual( 10, m.Substract( 12, 2 ) );
@@ -34,7 +35,7 @@ namespace TestProject1
         }
 
         [TestMethod]
-        public void Ex4_Multiply()
+        public void D_Multiply()
         {
             Maths m = new Maths();
             Assert.AreEqual( 24f, m.Multiply( 12f, 2f ) );
@@ -42,7 +43,7 @@ namespace TestProject1
         }
 
         [TestMethod]
-        public void Ex5_Divide()
+        public void E_Divide()
         {
             Maths m = new Maths();
             Assert.AreEqual( 6f, m.Divide( 12f, 2f ) );
@@ -50,7 +51,7 @@ namespace TestProject1
         }
 
         [TestMethod]
-        public void Ex6_Modulo()
+        public void F_Modulo()
         {
             Maths m = new Maths();
             Assert.AreEqual( 1, m.Modulo( 15, 2 ) );
@@ -58,7 +59,7 @@ namespace TestProject1
         }
 
         [TestMethod]
-        public void Ex7_Double()
+        public void G_Double()
         {
             Maths m = new Maths();
             Assert.AreEqual( 154f, m.Double( 77f ) );
@@ -66,7 +67,7 @@ namespace TestProject1
         }
 
         [TestMethod]
-        public void Ex8_RectanglePerimeter()
+        public void H_RectanglePerimeter()
         {
             Maths m = new Maths();
             Assert.AreEqual( 46f, m.RectanglePerimeter( 20f, 3f ) );
@@ -74,11 +75,21 @@ namespace TestProject1
         }
 
         [TestMethod]
-        public void Ex9_RectangleArea()
+        public void I_RectangleArea()
         {
             Maths m = new Maths();
             Assert.AreEqual( 60f, m.RectangleArea( 20f, 3f ) );
             Assert.AreEqual( 200f, m.RectangleArea( 20f, 10f ) );
+        }
+
+        [TestMethod]
+        public void J_CalculateAge()
+        {
+            Maths m = new Maths();
+            int age = 26;
+            Assert.AreEqual( age, m.CalculateAge( DateTime.Now.Year - age ) );
+            age = 89;
+            Assert.AreEqual( age, m.CalculateAge( DateTime.Now.Year - age ) );
         }
 
         [TestMethod]
@@ -87,6 +98,62 @@ namespace TestProject1
             Maths m = new Maths();
             Assert.AreEqual( "MarioZ", m.AddZ( "Mario" ) );
             Assert.AreEqual( "BatmanZ", m.AddZ( "Batman" ) );
+        }
+    }
+
+    [TestClass]
+    public class TestConditions
+    {
+        [TestMethod]
+        public void A_EvenOdd()
+        {
+            Conditions c = new Conditions();
+            Assert.IsTrue( c.EvenOdd( 12 ) );
+            Assert.IsTrue( c.EvenOdd( -120 ) );
+            Assert.IsFalse( c.EvenOdd( 97 ) );
+            Assert.IsFalse( c.EvenOdd( -67 ) );
+        }
+
+        [TestMethod]
+        public void B_Bigger()
+        {
+            Conditions c = new Conditions();
+            Assert.AreEqual( 24f, c.Bigger( 24f, 12f ) );
+            Assert.AreEqual( 24f, c.Bigger( 12f, 24f ) );
+            Assert.AreEqual( 12.3f, c.Bigger( 12.3f, -12.4f ) );
+        }
+
+        [TestMethod]
+        public void C_OddAndMoreTen()
+        {
+            Conditions c = new Conditions();
+            Assert.IsTrue( c.OddAndMoreTen( 12 ) );
+            Assert.IsTrue( c.OddAndMoreTen( 1156 ) );
+            Assert.IsFalse( c.OddAndMoreTen( 10 ) );
+            Assert.IsFalse( c.OddAndMoreTen( 11 ) );
+            Assert.IsFalse( c.OddAndMoreTen( -9 ) );
+        }
+
+        [TestMethod]
+        public void D_ThreeAndFive()
+        {
+            Conditions c = new Conditions();
+            Assert.IsTrue( c.ThreeAndFive( 15 ) );
+            Assert.IsTrue( c.ThreeAndFive( 450 ) );
+            Assert.IsFalse( c.ThreeAndFive( 3 ) );
+            Assert.IsFalse( c.ThreeAndFive( 5 ) );
+            Assert.IsFalse( c.ThreeAndFive( -9 ) );
+        }
+
+        [TestMethod]
+        public void E_IsMultiple()
+        {
+            Conditions c = new Conditions();
+            Assert.IsTrue( c.IsMultiple( 15, 3 ) );
+            Assert.IsTrue( c.IsMultiple( 450, 15 ) );
+            Assert.IsFalse( c.IsMultiple( 3, 16 ) );
+            Assert.IsFalse( c.IsMultiple( 5, 2 ) );
+            Assert.IsFalse( c.IsMultiple( -9, 6 ) );
         }
     }
 }
