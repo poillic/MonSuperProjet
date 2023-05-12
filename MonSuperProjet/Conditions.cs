@@ -26,4 +26,6 @@ public class Conditions
     {
 		return number % multiple == 0;
     }
+
+	
 }

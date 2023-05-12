@@ -55,6 +55,21 @@ namespace MonSuperProjet
 
 		}
 
+		public float CalculateBMI( float height, float mass )
+		{
+			return mass / ( height * height );
+		}
+
+		public float CelsiusToFahrenheit( float celsius )
+        {
+			return celsius * 9f / 5f + 32f;
+        }
+
+		public float FahrenheitToCelsius( float fahrenheit )
+		{
+			return ( fahrenheit - 32 ) * 5 / 9;
+		}
+
 		public string AddZ( string word )
         {
 			return word + "Z";

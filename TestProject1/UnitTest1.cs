@@ -93,6 +93,35 @@ namespace TestProject1
         }
 
         [TestMethod]
+        public void K_CalculateBMI()
+        {
+            Maths m = new Maths();
+
+            Assert.AreEqual( 32.65306f, m.CalculateBMI(1.75f, 100f), 0.01f );
+            Assert.AreEqual( 28.344671f, m.CalculateBMI( 1.68f, 80f ), 0.01f );
+        }
+
+        [TestMethod]
+        public void L_CelsiusToFahrenheit()
+        {
+            Maths m = new Maths();
+
+            Assert.AreEqual( 59f, m.CelsiusToFahrenheit( 15f ), 0.01f );
+            Assert.AreEqual( 42.8f, m.CelsiusToFahrenheit( 6f ), 0.01f );
+            Assert.AreEqual( 86f, m.CelsiusToFahrenheit( 30f ), 0.01f );
+        }
+
+        [TestMethod]
+        public void M_FahrenheitToCelsius()
+        {
+            Maths m = new Maths();
+
+            Assert.AreEqual( 15f, m.FahrenheitToCelsius( 59f ), 0.01f );
+            Assert.AreEqual( 6f, m.FahrenheitToCelsius( 42.8f ), 0.01f );
+            Assert.AreEqual( 30f, m.FahrenheitToCelsius( 86f ), 0.01f );
+        }
+
+        [TestMethod]
         public void Ex_AddZ()
         {
             Maths m = new Maths();
@@ -155,5 +184,6 @@ namespace TestProject1
             Assert.IsFalse( c.IsMultiple( 5, 2 ) );
             Assert.IsFalse( c.IsMultiple( -9, 6 ) );
         }
+
     }
 }
