@@ -156,10 +156,10 @@ namespace TestProject1
         public void C_OddAndMoreTen()
         {
             Conditions c = new Conditions();
-            Assert.IsTrue( c.OddAndMoreTen( 12 ) );
-            Assert.IsTrue( c.OddAndMoreTen( 1156 ) );
+            Assert.IsTrue( c.OddAndMoreTen( 13 ) );
+            Assert.IsTrue( c.OddAndMoreTen( 1157 ) );
             Assert.IsFalse( c.OddAndMoreTen( 10 ) );
-            Assert.IsFalse( c.OddAndMoreTen( 11 ) );
+            Assert.IsFalse( c.OddAndMoreTen( 12 ) );
             Assert.IsFalse( c.OddAndMoreTen( -9 ) );
         }
 
@@ -185,5 +185,61 @@ namespace TestProject1
             Assert.IsFalse( c.IsMultiple( -9, 6 ) );
         }
 
+        [TestMethod]
+        public void F_IsTriangleRectangle()
+        {
+            Conditions c = new Conditions();
+
+            Assert.IsTrue( c.IsTriangleRectangle( 3,4,5 ) );
+            Assert.IsTrue( c.IsTriangleRectangle( 5,12,13 ) );
+            Assert.IsTrue( c.IsTriangleRectangle( 6,8,10 ) );
+            Assert.IsFalse( c.IsTriangleRectangle( 1,8,5 ) );
+            Assert.IsFalse( c.IsTriangleRectangle( 7,8,5 ) );
+        }
+
+        [TestMethod]
+        public void G_IsVowel()
+        {
+            Conditions c = new Conditions();
+
+            Assert.IsTrue( c.IsVowel( 'a') );
+            Assert.IsTrue( c.IsVowel( 'E' ) );
+            Assert.IsTrue( c.IsVowel( 'U' ) );
+            Assert.IsFalse( c.IsVowel( 'b' ) );
+            Assert.IsFalse( c.IsVowel( 'z' ) );
+        }
+
+
+    }
+
+    [TestClass]
+    public class TestLoops
+    {
+        [TestMethod]
+        public void A_ShowEvenNumbers()
+        {
+            Loops l = new Loops();
+            Assert.AreEqual( "0 2 4 6 ", l.ShowEvenNumbers( 6 ) );
+            Assert.AreEqual( "0 2 4 6 ", l.ShowEvenNumbers( 7 ) );
+            Assert.AreEqual( "0 2 4 6 8 10 12 ", l.ShowEvenNumbers( 13 ) );
+        }
+
+        [TestMethod]
+        public void B_CalculateSum()
+        {
+            Loops l = new Loops();
+            Assert.AreEqual( 21, l.CalculateSum( 6 ) );
+            Assert.AreEqual( 28, l.CalculateSum( 7 ) );
+            Assert.AreEqual( 91, l.CalculateSum( 13 ) );
+        }
+
+        [TestMethod]
+        public void C_CountVowel()
+        {
+            Loops l = new Loops();
+            Assert.AreEqual( 2, l.CountVowels( "Calcul" ) );
+            Assert.AreEqual( 3, l.CountVowels( "Voyelles" ) );
+            Assert.AreEqual( 4, l.CountVowels( "CountVowel" ) );
+        }
     }
 }
