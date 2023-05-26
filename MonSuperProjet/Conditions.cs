@@ -2,6 +2,11 @@
 
 public class Conditions
 {
+    public bool IsPositive( int number )
+    {
+        return number > 0;
+    }
+
 	public bool EvenOdd( int number )
 	{
 		return number % 2 == 0; 
@@ -10,6 +15,11 @@ public class Conditions
 	public float Bigger( float number1, float number2 )
     {
 		return number1 >= number2 ? number1 : number2;
+    }
+
+    public bool CompareThreeNumbers( int a, int b, int c )
+    {
+        return a == b || a == c;
     }
 
 	public bool OddAndMoreTen( int number )
@@ -27,7 +37,25 @@ public class Conditions
 		return number % multiple == 0;
     }
 
-	public bool IsTriangleRectangle( int a, int b, int c )
+    public bool IsInRange( int number, int min, int max )
+    {
+        return min < number && number < max;
+    }
+
+    public bool IsLeapYear( int year )
+    {
+        if ( year % 4 == 0 )
+        {
+            if ( year % 100 != 0 || ( year % 100 == 0 && year % 400 == 0 ) )
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public bool IsTriangleRectangle( int a, int b, int c )
     {
         if ( a * a + b * b == c * c || a * a + c * c == b * b || b * b + c * c == a * a )
         {
@@ -50,5 +78,22 @@ public class Conditions
         {
             return false;
         }
+    }
+
+    public int MaxOfThreeNumbers( int a, int b, int c )
+    {
+        int max = a;
+
+        if ( b > max )
+        {
+            max = b; 
+        }
+
+        if ( c > max )
+        {
+            max = c;
+        }
+
+        return max;
     }
 }

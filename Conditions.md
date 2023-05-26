@@ -1,9 +1,37 @@
  # Conditions
 Cette suite d'exercice est dédiée à l'apprentissage des conditions if, if/else, if/else if et les switch.
 
-# Positif
-Écrivez une fonction nommée EstPositif qui prend en paramètre un entier et retourne true si le nombre est positif et false sinon.
-public bool EstPositif(int nombre)
+# Est Positif
+Vous devez créer une fonction nommée `IsPositive` qui prend en paramètre un entier `number` et renvoie `true` si le nombre est positif, et `false` s'il est négatif.
+
+Voici la signature de la fonction :
+
+```csharp
+public bool IsPositive(int number)
+```
+
+Contraintes :
+- Le paramètre `number` est un entier que vous devez vérifier.
+- Utilisez une condition pour vérifier si le nombre est supérieur à zéro.
+- Si le nombre est supérieur à zéro, retournez `true`, sinon retournez `false`.
+
+Exemple d'utilisation de la fonction :
+
+```csharp
+int num1 = 10;
+bool result1 = IsPositive(num1);
+Console.WriteLine("Le nombre " + num1 + " est positif : " + result1);
+// Affiche : "Le nombre 10 est positif : True"
+
+int num2 = -5;
+bool result2 = IsPositive(num2);
+Console.WriteLine("Le nombre " + num2 + " est positif : " + result2);
+// Affiche : "Le nombre -5 est positif : False"
+```
+
+Dans cet exemple, la fonction `IsPositive` est appelée avec deux nombres différents. Dans le premier cas, le nombre `num1` est 10. La fonction vérifie si ce nombre est positif et retourne `true` car 10 est supérieur à zéro. Dans le deuxième cas, le nombre `num2` est -5. La fonction vérifie si ce nombre est positif et retourne `false` car -5 n'est pas supérieur à zéro.
+
+À vous de coder la fonction `IsPositive` en utilisant une condition pour déterminer si le nombre `number` est positif ou non selon les contraintes données.
 
 # Pair ou Impair
 Vous devez créer une fonction nommée `EvenOdd` qui prend en paramètre un nombre entier et retourne `true` si le nombre est pair et `false` s'il est impair.
@@ -101,6 +129,43 @@ Dans cet exemple, la fonction `OddAndMoreTen` est appelée avec deux nombres : `1
 
 À vous de coder la fonction `OddAndMoreTen` en utilisant des opérations conditionnelles (`if`) pour vérifier les conditions spécifiées et renvoyer le résultat attendu.
 
+# Comparer trois nombres
+
+Vous devez créer une fonction nommée `CompareThreeNumbers` qui prend en paramètre trois entiers `a`, `b` et `c`, et renvoie `true` si le premier nombre `a` est égal à l'un des deux autres nombres `b` ou `c`, sinon renvoie `false`.
+
+Voici la signature de la fonction :
+
+```csharp
+public bool CompareThreeNumbers(int a, int b, int c)
+```
+
+Contraintes :
+- Les paramètres `a`, `b` et `c` sont des entiers que vous devez comparer.
+- Utilisez des conditions pour vérifier si `a` est égal à `b` ou à `c`.
+- Si `a` est égal à `b` ou à `c`, retournez `true`, sinon retournez `false`.
+
+Exemple d'utilisation de la fonction :
+
+```csharp
+int num1 = 10;
+int num2 = 5;
+int num3 = 10;
+bool result1 = CompareThreeNumbers(num1, num2, num3);
+Console.WriteLine("Le nombre " + num1 + " est égal à l'un des deux autres : " + result1);
+// Affiche : "Le nombre 10 est égal à l'un des deux autres : True"
+
+int num4 = 7;
+int num5 = 3;
+int num6 = 9;
+bool result2 = CompareThreeNumbers(num4, num5, num6);
+Console.WriteLine("Le nombre " + num4 + " est égal à l'un des deux autres : " + result2);
+// Affiche : "Le nombre 7 est égal à l'un des deux autres : False"
+```
+
+Dans cet exemple, la fonction `CompareThreeNumbers` est appelée avec deux jeux de trois nombres différents. Dans le premier cas, le nombre `num1` est égal à `num3` (tous deux valent 10), donc la fonction retourne `true`. Dans le deuxième cas, le nombre `num4` n'est égal à aucun des deux autres nombres `num5` et `num6` (7 est différent de 3 et de 9), donc la fonction retourne `false`.
+
+À vous de coder la fonction `CompareThreeNumbers` en utilisant des conditions pour comparer les trois nombres `a`, `b` et `c` selon les contraintes données.
+
 # Multiple de 3 et de 5
 Vous devez créer une fonction nommée `ThreeAndFive` qui prend en paramètre un nombre entier (`int`) et retourne `true` si le nombre est à la fois multiple de 3 et de 5. Sinon, la fonction doit retourner `false`.
 
@@ -166,6 +231,69 @@ Console.WriteLine(nombre2 + " est un multiple de " + multiple2 + " ? " + resulta
 Dans cet exemple, la fonction `IsMultiple` est appelée avec deux paires de nombres : (`12`, `3`) et (`7`, `4`). Le premier nombre de chaque paire est vérifié pour voir s'il est un multiple du deuxième nombre. Le premier nombre de la première paire (`12`) est un multiple de `3`, donc la fonction retourne `true`. Le premier nombre de la deuxième paire (`7`) n'est pas un multiple de `4`, donc la fonction retourne `false`. Les résultats sont ensuite affichés à l'écran.
 
 À vous de coder la fonction `IsMultiple` en utilisant l'opération modulo pour vérifier si le premier nombre est un multiple du deuxième nombre et renvoyer le résultat attendu.
+
+# Vérifier si un nombre est compris dans une plage
+
+Écrivez une fonction nommée `IsInRange` qui prend en paramètre un entier `number`, une valeur minimale `min` et une valeur maximale `max`. La fonction doit renvoyer `true` si le nombre `number` est compris entre `min` et `max`, inclusivement. Sinon, elle doit renvoyer `false`.
+
+Signature de la fonction :
+```csharp
+public bool IsInRange(int number, int min, int max)
+```
+
+Exemple d'utilisation :
+```csharp
+int num1 = 10;
+bool result1 = IsInRange(num1, 5, 15);
+Console.WriteLine("Le nombre " + num1 + " est compris entre 5 et 15 : " + result1);
+// Affiche : "Le nombre 10 est compris entre 5 et 15 : True"
+
+int num2 = 20;
+bool result2 = IsInRange(num2, 5, 15);
+Console.WriteLine("Le nombre " + num2 + " est compris entre 5 et 15 : " + result2);
+// Affiche : "Le nombre 20 est compris entre 5 et 15 : False"
+```
+
+# Vérifier si une année est bissextile
+
+Écrivez une fonction nommée `IsLeapYear` qui prend en paramètre une année `year` et renvoie `true` si cette année est bissextile, et `false` sinon. Une année est bissextile si elle est divisible par 4 mais non divisible par 100, sauf si elle est également divisible par 400.
+
+Signature de la fonction :
+```csharp
+public bool IsLeapYear(int year)
+```
+
+Exemple d'utilisation :
+```csharp
+int year1 = 2020;
+bool result1 = IsLeapYear(year1);
+Console.WriteLine("L'année " + year1 + " est bissextile : " + result1);
+// Affiche : "L'année 2020 est bissextile : True"
+
+int year2 = 2022;
+bool result2 = IsLeapYear(year2);
+Console.WriteLine("L'année " + year2 + " est bissextile : " + result2);
+// Affiche : "L'année 2022 est bissextile : False"
+```
+
+# Déterminer le plus grand parmi trois nombres
+
+Écrivez une fonction nommée `MaxOfThreeNumbers` qui prend en paramètre trois entiers `a`, `b` et `c` et renvoie le plus grand nombre parmi les trois.
+
+Signature de la fonction :
+```csharp
+public int MaxOfThreeNumbers(int a, int b, int c)
+```
+
+Exemple d'utilisation :
+```csharp
+int num1 = 10;
+int num2 = 15;
+int num3 = 7;
+int result = MaxOfThreeNumbers(num1, num2, num3);
+Console.WriteLine("Le plus grand nombre parmi " + num1 + ", " + num2 + " et " + num3 + " est : " + result);
+// Affiche : "Le plus grand nombre parmi 10, 15 et 7 est : 15"
+```
 
 # Triangle Rectangle
 Vous devez créer une fonction nommée `IsTriangleRectangle` qui prend en paramètre les longueurs des trois côtés d'un triangle (`int a, int b, int c`) et retourne `true` si le triangle est un triangle rectangle, et `false` sinon. Vous pouvez supposer que les longueurs des côtés sont fournies dans l'ordre correct pour former un triangle.

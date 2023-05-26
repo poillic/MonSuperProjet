@@ -1,6 +1,30 @@
  # Boucles
 Cette suite d'exercice est dédiée à l'apprentissage des boucles while, for, foreach.
 
+# Afficher les nombres de 1 à 10
+
+Description:
+Écrivez une fonction nommée `ShowOneToTen` qui construit une chaîne de caractères avec mes nombres de 1 à 10. Utilisez une boucle `for` pour résoudre cet exercice.
+
+Contraintes:
+- Utilisez une boucle `for` pour itérer de 1 à 10 inclusivement.
+- Affichez chaque nombre avec un espace après sauf si il s'agit du dernier.
+
+Signature de la fonction:
+```csharp
+public string ShowOneToTen()
+```
+
+Exemple d'utilisation:
+```csharp
+ShowOneToTen();
+```
+
+Sortie attendue:
+```
+1 2 3 4 5 6 7 8 9 10
+```
+
 # Nombres Pairs
 Énoncé de l'exercice - Afficher les nombres pairs
 
@@ -106,3 +130,30 @@ Console.WriteLine("Le nombre de voyelles dans la chaîne '" + text2 + "' est : " 
 Dans cet exemple, la fonction `CountVowels` est appelée avec deux chaînes de caractères différentes. Dans le premier cas, la chaîne `text1` est "Hello, world!". La fonction compte le nombre de voyelles dans cette chaîne et trouve qu'il y en a 3 (o, o, e). La fonction retourne donc la valeur 3. Dans le deuxième cas, la chaîne `text2` est "Programming is fun!". La fonction compte le nombre de voyelles dans cette chaîne et trouve qu'il y en a 5 (o, a, i, i, u). La fonction retourne donc la valeur 5.
 
 À vous de coder la fonction `CountVowels` en utilisant une boucle `foreach` et une variable de comptage pour déterminer le nombre de voyelles dans la chaîne `text` selon les contraintes données.
+
+# Générer une chaîne des puissances de 2
+
+Description:
+Écrivez une fonction nommée `GeneratePowerOfTwoString` qui prend en paramètre un entier positif `n`. Cette fonction doit générer et retourner une chaîne de caractères contenant les `n` premières puissances de 2, séparées par des sauts de ligne.
+
+Contraintes:
+- Utilisez une boucle `do-while` pour résoudre cet exercice.
+- Assurez-vous de traiter correctement le cas où `n` est égal à zéro (0) ou négatif.
+
+Signature de la fonction:
+```csharp
+public string GeneratePowerOfTwoString(int n)
+```
+
+Exemple d'utilisation:
+```csharp
+string result = GeneratePowerOfTwoString(5);
+Console.WriteLine(result);
+```
+
+Sortie attendue:
+```
+1 2 4 8 16
+```
+
+Dans cet exemple, la fonction `GeneratePowerOfTwoString` est appelée avec `n` égal à 5. Elle génère une chaîne de caractères contenant les cinq premières puissances de 2 (1, 2, 4, 8, 16) séparées par des sauts de ligne. La chaîne résultante est ensuite affichée à l'aide de la fonction `Console.WriteLine`.

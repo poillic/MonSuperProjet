@@ -134,7 +134,17 @@ namespace TestProject1
     public class TestConditions
     {
         [TestMethod]
-        public void A_EvenOdd()
+        public void A_IsPositive()
+        {
+            Conditions c = new Conditions();
+            Assert.IsTrue( c.IsPositive( 12 ) );
+            Assert.IsFalse( c.IsPositive( -120 ) );
+            Assert.IsTrue( c.IsPositive( 97 ) );
+            Assert.IsFalse( c.IsPositive( -67 ) );
+        }
+
+        [TestMethod]
+        public void B_EvenOdd()
         {
             Conditions c = new Conditions();
             Assert.IsTrue( c.EvenOdd( 12 ) );
@@ -144,12 +154,22 @@ namespace TestProject1
         }
 
         [TestMethod]
-        public void B_Bigger()
+        public void C_Bigger()
         {
             Conditions c = new Conditions();
             Assert.AreEqual( 24f, c.Bigger( 24f, 12f ) );
             Assert.AreEqual( 24f, c.Bigger( 12f, 24f ) );
             Assert.AreEqual( 12.3f, c.Bigger( 12.3f, -12.4f ) );
+        }
+
+        [TestMethod]
+        public void CompareThreeNumbers()
+        {
+            Conditions c = new Conditions();
+            Assert.IsTrue( c.CompareThreeNumbers( 24, 12, 24 ) );
+            Assert.IsFalse( c.CompareThreeNumbers( 12, 24, 15 ) );
+            Assert.IsTrue( c.CompareThreeNumbers(-5, -5, 5 ) );
+            Assert.IsFalse( c.CompareThreeNumbers( -12, 12, 15 ) );
         }
 
         [TestMethod]
@@ -186,6 +206,39 @@ namespace TestProject1
         }
 
         [TestMethod]
+        public void E_IsInRange()
+        {
+            Conditions c = new Conditions();
+            Assert.IsTrue( c.IsInRange( 15, 3, 20 ) );
+            Assert.IsTrue( c.IsInRange( 450, 449, 500 ) );
+            Assert.IsFalse( c.IsInRange( 3, 16, 32 ) );
+            Assert.IsFalse( c.IsInRange( 5, -5, 4 ) );
+            Assert.IsFalse( c.IsInRange( -9, 6, 10 ) );
+        }
+
+        [TestMethod]
+        public void IsLeapYear()
+        {
+            Conditions c = new Conditions();
+            Assert.IsTrue( c.IsLeapYear( 2024 ) );
+            Assert.IsTrue( c.IsLeapYear( 2016 ) );
+            Assert.IsFalse( c.IsLeapYear( 2022 ) );
+            Assert.IsFalse( c.IsLeapYear( 2023 ) );
+            Assert.IsFalse( c.IsLeapYear( 1995 ) );
+        }
+
+        [TestMethod]
+        public void MaxOfThreeNumbers()
+        {
+            Conditions c = new Conditions();
+            Assert.AreEqual( 3, c.MaxOfThreeNumbers( 1,2,3 ) );
+            Assert.AreEqual( 3, c.MaxOfThreeNumbers( 2,3,1 ) );
+            Assert.AreEqual( 3, c.MaxOfThreeNumbers( 3,2,1 ) );
+            Assert.AreEqual( 3, c.MaxOfThreeNumbers( 2,1,3 ) );
+            Assert.AreEqual( 3, c.MaxOfThreeNumbers( 3,1,2 ) );
+        }
+
+        [TestMethod]
         public void F_IsTriangleRectangle()
         {
             Conditions c = new Conditions();
@@ -216,12 +269,19 @@ namespace TestProject1
     public class TestLoops
     {
         [TestMethod]
+        public void ShowOneToTen()
+        {
+            Loops l = new Loops();
+            Assert.AreEqual( "1 2 3 4 5 6 7 8 9 10", l.ShowOneToTen() );
+        }
+
+        [TestMethod]
         public void A_ShowEvenNumbers()
         {
             Loops l = new Loops();
-            Assert.AreEqual( "0 2 4 6 ", l.ShowEvenNumbers( 6 ) );
-            Assert.AreEqual( "0 2 4 6 ", l.ShowEvenNumbers( 7 ) );
-            Assert.AreEqual( "0 2 4 6 8 10 12 ", l.ShowEvenNumbers( 13 ) );
+            Assert.AreEqual( "0 2 4 6", l.ShowEvenNumbers( 6 ) );
+            Assert.AreEqual( "0 2 4 6", l.ShowEvenNumbers( 7 ) );
+            Assert.AreEqual( "0 2 4 6 8 10 12", l.ShowEvenNumbers( 13 ) );
         }
 
         [TestMethod]
@@ -240,6 +300,16 @@ namespace TestProject1
             Assert.AreEqual( 2, l.CountVowels( "Calcul" ) );
             Assert.AreEqual( 3, l.CountVowels( "Voyelles" ) );
             Assert.AreEqual( 4, l.CountVowels( "CountVowel" ) );
+        }
+
+        [TestMethod]
+        public void GeneratePowerOfTwoString()
+        {
+            Loops l = new Loops();
+            Assert.AreEqual( "1", l.GeneratePowerOfTwoString( 1 ) );
+            Assert.AreEqual( "1 2 4 8", l.GeneratePowerOfTwoString( 4 ) );
+            Assert.AreEqual( "1 2 4 8 16 32", l.GeneratePowerOfTwoString( 6 ) );
+            Assert.AreEqual( "", l.GeneratePowerOfTwoString( 0 ) );
         }
     }
 }

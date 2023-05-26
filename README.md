@@ -213,3 +213,5 @@ Console.WriteLine(temperatureFahrenheit + " degrés Fahrenheit équivalent à " 
 Dans cet exemple, la fonction `FahrenheitToCelsius` doit prendre la température de `77.0` degrés Fahrenheit comme paramètre, effectuer la conversion en utilisant la formule ((77 - 32) * 5 / 9), ce qui donnera un résultat d'environ `25.0` degrés Celsius, puis renvoyer ce résultat. Le programme affichera donc "77.0 degrés Fahrenheit équivalent à 25.0 degrés Celsius." dans la console.
 
 À vous de coder la fonction `FahrenheitToCelsius` en utilisant le paramètre `fahrenheit` pour effectuer la conversion de température et renvoyer le résultat en degrés Celsius.
+
+# Clamp
