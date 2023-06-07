@@ -96,6 +96,23 @@ Dans cet exemple, la fonction `CalculateSum` est appelée avec deux entiers diffé
 
 À vous de coder la fonction `CalculateSum` en utilisant une boucle `while` et une variable de somme pour calculer la somme des entiers de 1 à `n` selon les contraintes données.
 
+# Factorielle
+Écrivez une fonction nommée `CalculateFactorial` qui prend en paramètre un entier positif `n` et retourne le factoriel de `n`. Le factoriel d'un nombre `n` est le produit de tous les entiers positifs de 1 à `n`.
+
+Voici la signature de la fonction :
+
+```csharp
+public int CalculateFactorial(int n)
+```
+
+Exemple d'utilisation :
+```csharp
+int result = CalculateFactorial(5);
+Console.WriteLine(result); // Affiche 120
+```
+
+Dans cet exercice, vous devez calculer le factoriel d'un nombre `n`. Le factoriel d'un nombre `n` est obtenu en multipliant tous les entiers positifs de 1 à `n`. Par exemple, le factoriel de 5 (représenté par `5!`) est égal à 1 * 2 * 3 * 4 * 5, soit 120. La fonction doit retourner le résultat du calcul.
+
 # Compter les voyelles
 Vous devez créer une fonction nommée `CountVowels` qui prend en paramètre une chaîne de caractères `text` et compte le nombre de voyelles (a, e, i, o, u) présentes dans la chaîne. Utilisez une boucle `foreach` pour résoudre cet exercice.
 
@@ -130,6 +147,40 @@ Console.WriteLine("Le nombre de voyelles dans la chaîne '" + text2 + "' est : " 
 Dans cet exemple, la fonction `CountVowels` est appelée avec deux chaînes de caractères différentes. Dans le premier cas, la chaîne `text1` est "Hello, world!". La fonction compte le nombre de voyelles dans cette chaîne et trouve qu'il y en a 3 (o, o, e). La fonction retourne donc la valeur 3. Dans le deuxième cas, la chaîne `text2` est "Programming is fun!". La fonction compte le nombre de voyelles dans cette chaîne et trouve qu'il y en a 5 (o, a, i, i, u). La fonction retourne donc la valeur 5.
 
 À vous de coder la fonction `CountVowels` en utilisant une boucle `foreach` et une variable de comptage pour déterminer le nombre de voyelles dans la chaîne `text` selon les contraintes données.
+
+# Les étoiles
+Écrivez une fonction nommée `PrintStars` qui prend en paramètre un entier positif `n` et retourne une chaîne de caractères contenant `n` étoiles (*). Chaque étoile est séparée par un espace.
+
+Voici la signature de la fonction :
+
+```csharp
+public string PrintStars(int n)
+```
+
+Exemple d'utilisation :
+```csharp
+string result = PrintStars(5);
+Console.WriteLine(result); // Affiche "*****"
+```
+
+Dans cet exercice, vous devez générer une chaîne de caractères contenant `n` étoiles, en les séparant par un espace. Par exemple, si `n` est égal à 5, la fonction doit renvoyer la chaîne "*****".
+
+# Un sur deux
+Écrivez une fonction nommée `AlternativePrint` qui prend en paramètres un entier positif `n`, un caractère `first` et un caractère `second`. La fonction retourne une chaîne de caractères où les caractères `first` et `second` alternent en fonction de l'indice de la boucle. Si l'indice est pair, le caractère `first` est ajouté à la chaîne, sinon le caractère `second` est ajouté.
+
+Voici la signature de la fonction :
+
+```csharp
+public string AlternativePrint(int n, char first, char second)
+```
+
+Exemple d'utilisation :
+```csharp
+string result = AlternativePrint(7, '*', '-');
+Console.WriteLine(result); // Affiche "*-*-*-*"
+```
+
+Dans cet exercice, vous devez générer une chaîne de caractères de longueur `n` où les caractères `first` et `second` alternent. Si l'indice de la boucle est pair, vous devez ajouter le caractère `first` à la chaîne, sinon vous devez ajouter le caractère `second`. Par exemple, si `n` est égal à 7, `first` est le caractère "*" et `second` est le caractère "-", la fonction doit renvoyer la chaîne "*-+-+-+-".
 
 # Générer une chaîne des puissances de 2
 

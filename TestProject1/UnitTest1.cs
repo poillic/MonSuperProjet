@@ -294,12 +294,42 @@ namespace TestProject1
         }
 
         [TestMethod]
+        public void V_CalculateFactorial()
+        {
+            Loops l = new Loops();
+            Assert.AreEqual( 720, l.CalculateFactorial( 6 ) );
+            Assert.AreEqual( 5040, l.CalculateFactorial( 7 ) );
+            Assert.AreEqual( 3628800, l.CalculateFactorial( 10 ) );
+        }
+
+        [TestMethod]
         public void C_CountVowel()
         {
             Loops l = new Loops();
             Assert.AreEqual( 2, l.CountVowels( "Calcul" ) );
             Assert.AreEqual( 3, l.CountVowels( "Voyelles" ) );
             Assert.AreEqual( 4, l.CountVowels( "CountVowel" ) );
+        }
+
+        [TestMethod]
+        public void T_PrintStars()
+        {
+            Loops l = new Loops();
+            Assert.AreEqual( "*", l.PrintStars( 1 ) );
+            Assert.AreEqual( "****", l.PrintStars( 4 ) );
+            Assert.AreEqual( "******", l.PrintStars( 6 ) );
+            Assert.AreEqual( "", l.PrintStars( 0 ) );
+        }
+
+        [TestMethod]
+        public void T_AlternativePrint()
+        {
+            Loops l = new Loops();
+            Assert.AreEqual( "n", l.AlternativePrint( 1, 'n', 'a') );
+            Assert.AreEqual( "bnbn", l.AlternativePrint( 4, 'b', 'n' ) );
+            Assert.AreEqual( "lmlmlm", l.AlternativePrint( 6, 'l', 'm' ) );
+            Assert.AreEqual( "xdxdxdxdx", l.AlternativePrint( 9, 'x', 'd' ) );
+            Assert.AreEqual( "", l.AlternativePrint( 0, 'p', 'm' ) );
         }
 
         [TestMethod]
@@ -310,6 +340,83 @@ namespace TestProject1
             Assert.AreEqual( "1 2 4 8", l.GeneratePowerOfTwoString( 4 ) );
             Assert.AreEqual( "1 2 4 8 16 32", l.GeneratePowerOfTwoString( 6 ) );
             Assert.AreEqual( "", l.GeneratePowerOfTwoString( 0 ) );
+        }
+    }
+
+    [TestClass]
+    public class TestArrays
+    {
+        [TestMethod]
+        public void A_CalculateSumFloat()
+        {
+            Arrays a = new Arrays();
+
+            Assert.AreEqual( 10f, a.CalculateSum( new float[]{ 1f, 2f, 3f, 4f } ) );
+            Assert.AreEqual( 7f, a.CalculateSum( new float[]{ 0.3f, -0.3f, 3f, 4f } ) );
+            Assert.AreEqual( -7f, a.CalculateSum( new float[]{ 0.3f, -0.3f, -3f, -4f } ) );
+        }
+
+        [TestMethod]
+        public void A_CalculateSumInt()
+        {
+            Arrays a = new Arrays();
+
+            Assert.AreEqual( 10, a.CalculateSum( new int[] { 1, 2, 3, 4 } ) );
+            Assert.AreEqual( -10, a.CalculateSum( new int[] { -1, -2, -3, -4 } ) );
+            Assert.AreEqual( -7, a.CalculateSum( new int[] { 3, -3, -3, -4 } ) );
+        }
+
+        [TestMethod]
+        public void B_BiggestNumber()
+        {
+            Arrays a = new Arrays();
+            Assert.AreEqual( 4, a.BiggestNumber( new int[] { 1, 2, 3, 4 } ) );
+            Assert.AreEqual( -1, a.BiggestNumber( new int[] { -1, -2, -3, -4 } ) );
+            Assert.AreEqual( 4, a.BiggestNumber( new int[] { 3, -3, 3, 4 } ) );
+            Assert.AreEqual( 3, a.BiggestNumber( new int[] { 3, -3, -3, -4 } ) );
+            Assert.AreEqual( 3, a.BiggestNumber( new int[] { 3, -3, -3, -4 } ) );
+        }
+
+        [TestMethod]
+        public void D_FindMinimum()
+        {
+            Arrays a = new Arrays();
+            Assert.AreEqual( 1, a.FindMinimum( new int[] { 1, 2, 3, 4 } ) );
+            Assert.AreEqual( -4, a.FindMinimum( new int[] { -1, -2, -3, -4 } ) );
+            Assert.AreEqual( -3, a.FindMinimum( new int[] { 3, -3, 3, 4 } ) );
+            Assert.AreEqual( -4, a.FindMinimum( new int[] { 3, -3, -3, -4 } ) );
+            Assert.AreEqual( -4, a.FindMinimum( new int[] { 3, -3, -3, -4 } ) );
+        }
+
+        [TestMethod]
+        public void C_LongestWord()
+        {
+            Arrays a = new Arrays();
+            Assert.AreEqual( "aa", a.LongestWord( new string[] { "a", "aa" } ) );
+            Assert.AreEqual( "a", a.LongestWord( new string[] { "a", "b" } ) );
+            Assert.AreEqual( "Bowser", a.LongestWord( new string[] { "Mario", "Luigi", "Bowser" } ) );
+            Assert.AreEqual( "Matsumoto", a.LongestWord( new string[] { "Hamada", "Yamasaki", "Endo", "Tanaka", "Matsumoto" } ) );
+        }
+
+        [TestMethod]
+        public void D_ReverseArray()
+        {
+            Arrays a = new Arrays();
+
+            CollectionAssert.AreEqual( new int[] { 2, 1 }, a.ReverseArray( new int[] { 1, 2 } ) );
+            CollectionAssert.AreEqual( new int[] { 8,6,4 }, a.ReverseArray( new int[] { 4,6,8 } ) );
+            CollectionAssert.AreEqual( new int[] { 4650,65,-15 }, a.ReverseArray( new int[] { -15,65,4650 } ) );
+        }
+
+        [TestMethod]
+        public void D_CountOccurrences()
+        {
+            Arrays a = new Arrays();
+            Assert.AreEqual( 1, a.CountOccurrences( new int[] { 1, 2, 3, 4 }, 1 ) );
+            Assert.AreEqual( 1, a.CountOccurrences( new int[] { -1, -2, -3, -4 }, -4 ) );
+            Assert.AreEqual( 2, a.CountOccurrences( new int[] { 3, -3, 3, 4 }, 3 ) );
+            Assert.AreEqual( 1, a.CountOccurrences( new int[] { 3, -3, -3, -4 }, 3 ) );
+            Assert.AreEqual( 3, a.CountOccurrences( new int[] { 2,4,5,2,2,6,7 },2 ) );
         }
     }
 }

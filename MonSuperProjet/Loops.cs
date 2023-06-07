@@ -54,6 +54,18 @@ namespace MonSuperProjet
             return result;
         }
 
+        public int CalculateFactorial( int n )
+        {
+            int result = 1;
+
+            for ( int a = 1; a <= n; a++ )
+            {
+                result *= a;
+            }
+
+            return result;
+        }
+
         public int CountVowels( string text )
         {
             int count = 0;
@@ -68,7 +80,36 @@ namespace MonSuperProjet
             return count;
         }
 
-        
+        public string PrintStars( int n )
+        {
+            string result = "";
+
+            for ( int i = 0; i < n; i++ )
+            {
+                result += "*";
+            }
+
+            return result;
+        }
+
+        public string AlternativePrint( int n, char first, char second )
+        {
+            string result = "";
+
+            for ( int i = 0; i < n; i++ )
+            {
+                if( i % 2 == 0 )
+                {
+                    result += first;
+                }
+                else
+                {
+                    result += second;
+                }
+            }
+
+            return result;
+        }
 
         public string GeneratePowerOfTwoString( int n )
         {
