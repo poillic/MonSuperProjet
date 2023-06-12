@@ -137,7 +137,7 @@ Dans cet exemple, si l'année en cours est 2023, la fonction `CalculateAge` doit
 À vous de coder la fonction `CalculateAge` en utilisant l'année de naissance fournie pour déterminer l'âge de la personne et le retourner comme résultat.
 
 # Maths - Calculer le Body Mass Index ( IMC en français )
-Vous devez écrire une fonction nommée `CalculateBMI` qui prend en paramètre la taille (`height`) et le poids (`mass`) d'une personne et retourne son indice de masse corporelle (IMC).
+Vous devez écrire une fonction nommée `CalculateBMI` qui prend en paramètre la taille (`height`) et le poids (`mass`) d'une personne et retourne son indice de masse corporelle (IMC). Calculer l'indice de masse corporelle en utilisant la formule : poids (en kilogrammes) / (taille (en mètres) * taille (en mètres)).
 
 Voici la signature de la fonction :
 
@@ -147,7 +147,7 @@ public float CalculateBMI(float height, float mass)
 
 Contraintes :
 - Les paramètres `height` et `mass` sont des nombres de type `float` représentant respectivement la taille (en mètres) et le poids (en kilogrammes) de la personne.
-- Assurez-vous que la taille et le poids fournis sont des valeurs positives et non nulles. Si l'un des paramètres est invalide (inférieur ou égal à zéro), vous devez lever une exception de type `ArgumentException` avec un message d'erreur approprié.
+- La formule à utiliser est : BMI = height / (mass * mass)
 
 Exemple d'utilisation de la fonction :
 
@@ -158,12 +158,12 @@ float bmi = CalculateBMI(personHeight, personWeight);
 Console.WriteLine("L'IMC de la personne est : " + bmi);
 ```
 
-Dans cet exemple, la fonction `CalculateBMI` doit prendre la taille `1.75` et le poids `68.5` de la personne comme paramètres, calculer l'indice de masse corporelle en utilisant la formule : poids (en kilogrammes) / (taille (en mètres) * taille (en mètres)), ce qui donnera un résultat d'environ `22.4`, puis renvoyer ce résultat. Le programme affichera donc "L'IMC de la personne est : 22.4" dans la console.
+Dans cet exemple, la fonction `CalculateBMI` doit prendre la taille `1.75` et le poids `68.5` de la personne comme paramètres, ce qui donnera un résultat d'environ `22.4`. Le programme affichera donc "L'IMC de la personne est : 22.4" dans la console.
 
 À vous de coder la fonction `CalculateBMI` en utilisant les paramètres `height` et `mass` pour calculer l'IMC de la personne et le renvoyer comme résultat.
 
 # Maths - Conversion Celsius vers Farenheit
-Vous devez écrire une fonction nommée `CelsiusToFahrenheit` qui prend en paramètre une température en degrés Celsius (`celsius`) et la convertit en degrés Fahrenheit.
+Vous devez écrire une fonction nommée `CelsiusToFahrenheit` qui prend en paramètre une température en degrés Celsius (`celsius`) et la convertit en degrés Fahrenheit. Effectuez la conversion en utilisant la formule (Celsius * 9 / 5 + 32).
 
 Voici la signature de la fonction :
 
@@ -184,12 +184,12 @@ float temperatureFahrenheit = CelsiusToFahrenheit(temperatureCelsius);
 Console.WriteLine(temperatureCelsius + " degrés Celsius équivalent à " + temperatureFahrenheit + " degrés Fahrenheit.");
 ```
 
-Dans cet exemple, la fonction `CelsiusToFahrenheit` doit prendre la température de `25.0` degrés Celsius comme paramètre, effectuer la conversion en utilisant la formule (25 * 9 / 5 + 32), ce qui donnera un résultat d'environ `77.0` degrés Fahrenheit, puis renvoyer ce résultat. Le programme affichera donc "25.0 degrés Celsius équivalent à 77.0 degrés Fahrenheit." dans la console.
+Dans cet exemple, la fonction `CelsiusToFahrenheit` doit prendre la température de `25.0` degrés Celsius comme paramètre, ce qui donnera un résultat d'environ `77.0` degrés Fahrenheit. Le programme affichera donc "25.0 degrés Celsius équivalent à 77.0 degrés Fahrenheit." dans la console.
 
 À vous de coder la fonction `CelsiusToFahrenheit` en utilisant le paramètre `celsius` pour effectuer la conversion de température et renvoyer le résultat en degrés Fahrenheit.
 
 # Maths - Conversion Farenheit vers Celsius
-Vous devez écrire une fonction nommée `FahrenheitToCelsius` qui prend en paramètre une température en degrés Fahrenheit (`fahrenheit`) et la convertit en degrés Celsius.
+Vous devez écrire une fonction nommée `FahrenheitToCelsius` qui prend en paramètre une température en degrés Fahrenheit (`fahrenheit`) et la convertit en degrés Celsius. Effectuez la conversion en utilisant la formule (Fahrenheit - 32) * 5 / 9.
 
 Voici la signature de la fonction :
 
@@ -210,7 +210,7 @@ float temperatureCelsius = FahrenheitToCelsius(temperatureFahrenheit);
 Console.WriteLine(temperatureFahrenheit + " degrés Fahrenheit équivalent à " + temperatureCelsius + " degrés Celsius.");
 ```
 
-Dans cet exemple, la fonction `FahrenheitToCelsius` doit prendre la température de `77.0` degrés Fahrenheit comme paramètre, effectuer la conversion en utilisant la formule ((77 - 32) * 5 / 9), ce qui donnera un résultat d'environ `25.0` degrés Celsius, puis renvoyer ce résultat. Le programme affichera donc "77.0 degrés Fahrenheit équivalent à 25.0 degrés Celsius." dans la console.
+Dans cet exemple, la fonction `FahrenheitToCelsius` doit prendre la température de `77.0` degrés Fahrenheit comme paramètre, ce qui donnera un résultat d'environ `25.0` degrés Celsius. Le programme affichera donc "77.0 degrés Fahrenheit équivalent à 25.0 degrés Celsius." dans la console.
 
 À vous de coder la fonction `FahrenheitToCelsius` en utilisant le paramètre `fahrenheit` pour effectuer la conversion de température et renvoyer le résultat en degrés Celsius.
 
