@@ -10,103 +10,45 @@ namespace MonSuperProjet
     {
         public float CalculateSum( float[] array )
         {
-            float res = 0;
-
-            foreach ( float n in array )
-            {
-                res += n;
-            }
-
-            return res;
+            
+            return 0f;
         }
 
         public int CalculateSum( int[] array )
         {
-            int res = 0;
-
-            foreach ( int n in array )
-            {
-                res += n;
-            }
-
-            return res;
+            return 0;
         }
 
         public int BiggestNumber( int[] array )
         {
-            int res = array[ 0 ];
 
-            for ( int i = 1; i < array.Length; i++ )
-            {
-                if( array[i] > res )
-                {
-                    res = array[ i ];
-                }
-            }
-
-            return res;
+            return 0;
         }
 
         public int FindMinimum( int[] array )
         {
-            int res = array[ 0 ];
 
-            for ( int i = 1; i < array.Length; i++ )
-            {
-                if( array[ i ] < res  )
-                {
-                    res = array[ i ];
-                }
-            }
-
-            return res;
+            return 0;
         }
 
         public string LongestWord( string[] array )
         {
-            string res = array[ 0 ];
 
-            for ( int i = 1; i < array.Length; i++ )
-            {
-                if( array[i].Length > res.Length )
-                {
-                    res = array[ i ];
-                }
-            }
-
-            return res;
+            return "";
         }
 
         public int[] ReverseArray( int[] array )
         {
-            int left = 0;
-            int right = array.Length - 1;
 
-            while( left < right )
-            {
-                int tmp = array[ left ];
-                array[ left ] = array[ right ];
-                array[ right ] = tmp;
-                left++;
-                right--;
-            }
 
-            return array;
+            return new int[0];
         }
 
         public int CountOccurrences( int[] array, int number )
         {
-            int res = 0;
 
-            foreach ( int n in array )
-            {
-                if ( n == number )
-                {
-                    res++;
-                }
-            }
 
-            return res;
+            return 0;
         }
     }
 

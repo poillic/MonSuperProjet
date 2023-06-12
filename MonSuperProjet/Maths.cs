@@ -11,68 +11,68 @@ namespace MonSuperProjet
 
 		public int Add( int A, int B )
 		{
-			return A + B;
+			return 0;
 		}
 
 		public int Substract( int A, int B )
         {
-			return A - B;
+			return 0;
         }
 
 		public float Multiply( float A, float B )
 		{
-			return A * B;
+			return 0f;
 		}
 
 		public float Divide( float A, float B )
         {
-			return A / B;
+			return 0f;
         }
 
 		public int Modulo( int A, int B )
         {
-			return A % B;
+			return 0;
         }
 
 		public float Double( float number )
         {
-			return Multiply( number, 2 );
+			return 0f;
         }
 
 		public float RectanglePerimeter( float width, float height )
 		{
-			return ( width + height ) * 2f;
+			return 0f;
 		}
 
 		public float RectangleArea( float width, float height )
 		{
-			return width * height;
+			return 0f;
 		}
 
 		public int CalculateAge( int birthyear )
         {
-			return DateTime.Now.Year - birthyear;
+			return 0;
 
 		}
 
 		public float CalculateBMI( float height, float mass )
 		{
-			return mass / ( height * height );
+			return 0f;
 		}
 
 		public float CelsiusToFahrenheit( float celsius )
         {
-			return celsius * 9f / 5f + 32f;
+			return 0f;
         }
 
 		public float FahrenheitToCelsius( float fahrenheit )
 		{
-			return ( fahrenheit - 32 ) * 5 / 9;
+			return 0f;
 		}
 
 		public string AddZ( string word )
         {
-			return word + "Z";
+			return "";
         }
 	}
 }

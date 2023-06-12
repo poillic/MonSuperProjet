@@ -10,132 +10,51 @@ namespace MonSuperProjet
     {
         public string ShowOneToTen()
         {
-            string result = "";
-
-            for ( int i = 1; i <= 10; i++ )
-            {
-                result += i.ToString();
-
-                if( i < 10 )
-                {
-                    result += " ";
-                }
-            }
-
-            return result;
+            return "";
         }
 
         public string ShowEvenNumbers(int n )
         {
-            string result = "";
-
-            for ( int i = 0; i <= n; i+=2 )
-            {
-                result += i;
-
-                if( i+1 < n )
-                {
-                    result += " ";
-                }
-            }
-
-            return result;
+            return "";
         }
 
         public int CalculateSum( int n )
         {
-            int result = 0;
-            int i = 1;
-
-            while( i <= n )
-            {
-                result += i;
-                i++;            }
-            return result;
+            
+            return 0;
         }
 
         public int CalculateFactorial( int n )
         {
-            int result = 1;
+            
 
-            for ( int a = 1; a <= n; a++ )
-            {
-                result *= a;
-            }
-
-            return result;
+            return 0;
         }
 
         public int CountVowels( string text )
         {
-            int count = 0;
-            char[] voyelles = { 'a', 'e', 'i', 'o', 'u' };
-            foreach ( char lettre in text.ToLower() )
-            {
-                if ( voyelles.Contains( lettre ) )
-                {
-                    count++;
-                }
-            }
-            return count;
+            
+            return 0;
         }
 
         public string PrintStars( int n )
         {
-            string result = "";
 
-            for ( int i = 0; i < n; i++ )
-            {
-                result += "*";
-            }
-
-            return result;
+            return "";
         }
 
         public string AlternativePrint( int n, char first, char second )
         {
-            string result = "";
+            
 
-            for ( int i = 0; i < n; i++ )
-            {
-                if( i % 2 == 0 )
-                {
-                    result += first;
-                }
-                else
-                {
-                    result += second;
-                }
-            }
-
-            return result;
+            return "";
         }
 
         public string GeneratePowerOfTwoString( int n )
         {
-            string result = "";
-            int power = 1;
-            int count = 0;
+            
 
-            if( n <= 0 )
-            {
-                return result;
-            }
-
-            do
-            {
-                result += power.ToString();
-
-                if( count < n - 1 )
-                {
-                    result += " ";
-                }
-
-                power *= 2;
-                count++;
-            } while ( count < n );
-
-            return result;
+            return "";
         }
     }
 }
