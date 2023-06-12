@@ -1,4 +1,4 @@
- # Boucles
+# Tableaux
 Cette suite d'exercice est dédiée à l'apprentissage des tableaux et continue l'apprentissage des boucles.
 
 # Calcul de la somme d'un tableau de float
@@ -111,7 +111,7 @@ Voici la signature de la fonction :
 public int[] ReverseArray(int[] array)
 ```
 
-La fonction `ReverseArray` utilise deux variables `left` et `right` initialisées respectivement à 0 et à la longueur du tableau moins 1. Elle effectue ensuite une boucle `while` tant que `left` est inférieur à `right`. À chaque itération, elle effectue un échange entre les éléments aux indices `left` et `right` du tableau en utilisant une variable temporaire `tmp`. Ensuite, elle décrémente `right` et incrémente `left`. Ce processus se répète jusqu'à ce que `left` soit supérieur ou égal à `right`, ce qui signifie que tout le tableau a été inversé. Enfin, la fonction retourne le tableau inversé.
+La fonction `ReverseArray` créer un nouveau tableau vide de même longueur que le tableau fourni en entrée `int[] res = new int[array.Length]`. En utilisant une boucle `for` de `0` à la longueur du tableau, elle va initier chaque case du nouveau tableau avec l'élément opposé dans le tableau d'entrée.
 
 ```csharp
 int[] numbers = { 1, 2, 3, 4, 5 };
