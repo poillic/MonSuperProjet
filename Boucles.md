@@ -1,10 +1,10 @@
- # Boucles
+# Boucles
 Cette suite d'exercice est dédiée à l'apprentissage des boucles while, for, foreach.
 
 # Afficher les nombres de 1 à 10
 
 Description:
-Écrivez une fonction nommée `ShowOneToTen` qui construit une chaîne de caractères avec mes nombres de 1 à 10. Utilisez une boucle `for` pour résoudre cet exercice.
+Écrivez une fonction nommée `ShowOneToTen` qui construit une chaîne de caractères avec les nombres de 1 à 10, séparés par des espaces. Utilisez une boucle `for` pour résoudre cet exercice.
 
 Contraintes:
 - Utilisez une boucle `for` pour itérer de 1 à 10 inclusivement.
@@ -28,7 +28,7 @@ Sortie attendue:
 # Nombres Pairs
 Énoncé de l'exercice - Afficher les nombres pairs
 
-Vous devez créer une fonction nommée `ShowEvenNumbers` qui prend en paramètre un entier positif `n` et retourne une chaîne de caractères contenant tous les nombres pairs de 0 à `n`. Utilisez une boucle `for` pour résoudre cet exercice.
+Vous devez créer une fonction nommée `ShowEvenNumbers` qui prend en paramètre un entier positif `n` et retourne une chaîne de caractères contenant tous les nombres pairs de 0 à `n`, séparés par des espaces. Utilisez une boucle `for` pour résoudre cet exercice.
 
 Voici la signature de la fonction :
 
@@ -40,7 +40,7 @@ Contraintes :
 - Le paramètre `n` est un entier positif représentant la limite supérieure des nombres pairs à afficher.
 - Utilisez une boucle `for` pour itérer de 0 à `n`.
 - À chaque itération, vérifiez si le nombre courant est pair en utilisant l'opérateur modulo (`%`). Si le reste de la division par 2 est égal à 0, le nombre est pair.
-- Si le nombre est pair, ajoutez-le à une chaîne de caractères en utilisant une séparation appropriée, comme un espace ou une virgule.
+- Si le nombre est pair, ajoutez-le à une chaîne de caractères avec un espace.
 - À la fin de la boucle, retournez la chaîne de caractères contenant tous les nombres pairs.
 
 Exemple d'utilisation de la fonction :
@@ -73,6 +73,7 @@ public int CalculateSum(int n)
 Contraintes :
 - Le paramètre `n` est un entier positif représentant la limite supérieure des entiers à sommer.
 - Initialisez une variable `sum` à 0 qui va stocker la somme.
+- Initialiser une variable à 1 qui va stocker le nombre courant.
 - Utilisez une boucle `while` avec une condition pour itérer tant que le nombre courant est inférieur ou égal à `n`.
 - À chaque itération, ajoutez le nombre courant à la variable `sum`.
 - Augmentez le nombre courant de 1 à chaque itération.
@@ -149,7 +150,7 @@ Dans cet exemple, la fonction `CountVowels` est appelée avec deux chaînes de car
 À vous de coder la fonction `CountVowels` en utilisant une boucle `foreach` et une variable de comptage pour déterminer le nombre de voyelles dans la chaîne `text` selon les contraintes données.
 
 # Les étoiles
-Écrivez une fonction nommée `PrintStars` qui prend en paramètre un entier positif `n` et retourne une chaîne de caractères contenant `n` étoiles (*). Chaque étoile est séparée par un espace.
+Écrivez une fonction nommée `PrintStars` qui prend en paramètre un entier positif `n` et retourne une chaîne de caractères contenant `n` étoiles (*).
 
 Voici la signature de la fonction :
 
@@ -189,7 +190,7 @@ Description:
 
 Contraintes:
 - Utilisez une boucle `do-while` pour résoudre cet exercice.
-- Assurez-vous de traiter correctement le cas où `n` est égal à zéro (0) ou négatif.
+- Utilisez le caractère spéciale '\n' pour faire des sauts de ligne.
 
 Signature de la fonction:
 ```csharp
@@ -204,7 +205,11 @@ Console.WriteLine(result);
 
 Sortie attendue:
 ```
-1 2 4 8 16
+1
+2
+4
+8
+16
 ```
 
 Dans cet exemple, la fonction `GeneratePowerOfTwoString` est appelée avec `n` égal à 5. Elle génère une chaîne de caractères contenant les cinq premières puissances de 2 (1, 2, 4, 8, 16) séparées par des sauts de ligne. La chaîne résultante est ensuite affichée à l'aide de la fonction `Console.WriteLine`.

@@ -2,7 +2,7 @@
 Cette suite d'exercice est dédiée à l'apprentissage des conditions if, if/else, if/else if et les switch.
 
 # Est Positif
-Vous devez créer une fonction nommée `IsPositive` qui prend en paramètre un entier `number` et renvoie `true` si le nombre est positif, et `false` s'il est négatif.
+Vous devez créer une fonction nommée `IsPositive` qui prend en paramètre un entier `number` et renvoie `true` si le nombre est positif, et `false` sinon.
 
 Voici la signature de la fonction :
 
@@ -34,12 +34,12 @@ Dans cet exemple, la fonction `IsPositive` est appelée avec deux nombres différe
 À vous de coder la fonction `IsPositive` en utilisant une condition pour déterminer si le nombre `number` est positif ou non selon les contraintes données.
 
 # Pair ou Impair
-Vous devez créer une fonction nommée `EvenOdd` qui prend en paramètre un nombre entier et retourne `true` si le nombre est pair et `false` s'il est impair.
+Vous devez créer une fonction nommée `IsEven` qui prend en paramètre un nombre entier et retourne `true` si le nombre est pair et `false` s'il est impair.
 
 Voici la signature de la fonction :
 
 ```csharp
-public bool EvenOdd(int number)
+public bool IsEven(int number)
 ```
 
 Contraintes :
@@ -52,17 +52,17 @@ Exemple d'utilisation de la fonction :
 
 ```csharp
 int nombre1 = 4;
-bool estPair1 = EvenOdd(nombre1);
+bool estPair1 = IsEven(nombre1);
 Console.WriteLine(nombre1 + " est pair ? " + estPair1); // Affiche : "4 est pair ? True"
 
 int nombre2 = 7;
-bool estPair2 = EvenOdd(nombre2);
+bool estPair2 = IsEven(nombre2);
 Console.WriteLine(nombre2 + " est pair ? " + estPair2); // Affiche : "7 est pair ? False"
 ```
 
-Dans cet exemple, la fonction `EvenOdd` est appelée avec deux nombres : `4` et `7`. Le premier nombre est pair, car le reste de la division par 2 est égal à 0, donc la fonction retourne `true`. Le deuxième nombre est impair, car le reste de la division par 2 n'est pas égal à 0, donc la fonction retourne `false`. Les résultats sont ensuite affichés à l'écran.
+Dans cet exemple, la fonction `IsEven` est appelée avec deux nombres : `4` et `7`. Le premier nombre est pair, car le reste de la division par 2 est égal à 0, donc la fonction retourne `true`. Le deuxième nombre est impair, car le reste de la division par 2 n'est pas égal à 0, donc la fonction retourne `false`. Les résultats sont ensuite affichés à l'écran.
 
-À vous de coder la fonction `EvenOdd` en utilisant l'opérateur modulo pour déterminer si le nombre est pair ou impair et renvoyer le résultat attendu.
+À vous de coder la fonction `IsEven` en utilisant l'opérateur modulo pour déterminer si le nombre est pair ou impair et renvoyer le résultat attendu.
 
 # Le plus grand
 Vous devez créer une fonction nommée `BiggerNumber` qui prend en paramètre deux nombres à virgule (`float`) et retourne le plus grand des deux nombres. Si les deux nombres sont égaux, la fonction doit retourner le premier nombre.
@@ -120,12 +120,16 @@ int nombre1 = 13;
 bool resultat1 = OddAndMoreTen(nombre1);
 Console.WriteLine(nombre1 + " est impair et supérieur à 10 ? " + resultat1); // Affiche : "13 est impair et supérieur à 10 ? True"
 
-int nombre2 = 8;
+int nombre2 = 14;
 bool resultat2 = OddAndMoreTen(nombre2);
-Console.WriteLine(nombre2 + " est impair et supérieur à 10 ? " + resultat2); // Affiche : "8 est impair et supérieur à 10 ? False"
+Console.WriteLine(nombre2 + " est impair et supérieur à 10 ? " + resultat2); // Affiche : "14 est impair et supérieur à 10 ? False"
+
+int nombre2 = 9;
+bool resultat2 = OddAndMoreTen(nombre2);
+Console.WriteLine(nombre2 + " est impair et supérieur à 10 ? " + resultat2); // Affiche : "9 est impair et supérieur à 10 ? False"
 ```
 
-Dans cet exemple, la fonction `OddAndMoreTen` est appelée avec deux nombres : `13` et `8`. Le premier nombre est impair et supérieur à 10, donc la fonction retourne `true`. Le deuxième nombre n'est pas impair, donc la fonction retourne `false`. Les résultats sont ensuite affichés à l'écran.
+Dans cet exemple, la fonction `OddAndMoreTen` est appelée avec trois nombres : `13`, `14` et `9`. Le premier nombre est impair et supérieur à 10, donc la fonction retourne `true`. Le deuxième nombre n'est pas impair, donc la fonction retourne `false`. Le troisième nombre n'est pas supérieur à 10, la fonction retourn `false`. Les résultats sont ensuite affichés à l'écran.
 
 À vous de coder la fonction `OddAndMoreTen` en utilisant des opérations conditionnelles (`if`) pour vérifier les conditions spécifiées et renvoyer le résultat attendu.
 
@@ -296,7 +300,7 @@ Console.WriteLine("Le plus grand nombre parmi " + num1 + ", " + num2 + " et " + 
 ```
 
 # Triangle Rectangle
-Vous devez créer une fonction nommée `IsTriangleRectangle` qui prend en paramètre les longueurs des trois côtés d'un triangle (`int a, int b, int c`) et retourne `true` si le triangle est un triangle rectangle, et `false` sinon. Vous pouvez supposer que les longueurs des côtés sont fournies dans l'ordre correct pour former un triangle.
+Vous devez créer une fonction nommée `IsTriangleRectangle` qui prend en paramètre les longueurs des trois côtés d'un triangle (`int a, int b, int c`) et retourne `true` si le triangle est un triangle rectangle, ayant c pour hypothénuse, et `false` sinon. Vous pouvez supposer que les longueurs des côtés sont fournies dans l'ordre correct pour former un triangle.
 
 Voici la signature de la fonction :
 
@@ -316,17 +320,17 @@ Exemple d'utilisation de la fonction :
 int a1 = 3, b1 = 4, c1 = 5;
 bool resultat1 = IsTriangleRectangle(a1, b1, c1);
 Console.WriteLine("Les côtés du triangle sont : " + a1 + ", " + b1 + ", " + c1);
-Console.WriteLine("Est-ce un triangle rectangle ? " + resultat1); // Affiche : "Est-ce un triangle rectangle ? True"
+Console.WriteLine("Est-ce un triangle rectangle ? " + resultat1); // Affiche : "Est-ce un triangle rectangle ? True" car 9 + 16 = 25
 
 int a2 = 5, b2 = 12, c2 = 13;
 bool resultat2 = IsTriangleRectangle(a2, b2, c2);
 Console.WriteLine("Les côtés du triangle sont : " + a2 + ", " + b2 + ", " + c2);
-Console.WriteLine("Est-ce un triangle rectangle ? " + resultat2); // Affiche : "Est-ce un triangle rectangle ? True"
+Console.WriteLine("Est-ce un triangle rectangle ? " + resultat2); // Affiche : "Est-ce un triangle rectangle ? True" car 25 + 144 = 169
 
-int a3 = 6, b3 = 8, c3 = 10;
+int a3 = 6, b3 = 8, c3 = 9;
 bool resultat3 = IsTriangleRectangle(a3, b3, c3);
 Console.WriteLine("Les côtés du triangle sont : " + a3 + ", " + b3 + ", " + c3);
-Console.WriteLine("Est-ce un triangle rectangle ? " + resultat3); // Affiche : "Est-ce un triangle rectangle ? False"
+Console.WriteLine("Est-ce un triangle rectangle ? " + resultat3); // Affiche : "Est-ce un triangle rectangle ? False" 36 + 64 != 81
 ```
 
 Dans cet exemple, la fonction `IsTriangleRectangle` est appelée avec trois jeux de longueurs de côtés de triangle. Dans le premier cas, les longueurs des côtés sont `3`, `4` et `5`, ce qui correspond à un triangle rectangle (3^2 + 4^2 = 5^2). La fonction retourne donc `true`. Dans le deuxième cas, les longueurs des côtés sont `5`, `12` et `13`, également correspondant à un triangle rectangle. La fonction retourne encore `true`. Dans le troisième cas, les longueurs des côtés sont `6`, `8` et `10`, ce qui ne correspond pas à un triangle rectangle. La fonction retourne donc `false`. Les résultats sont ensuite affichés à l'écran.

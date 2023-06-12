@@ -4,63 +4,77 @@ public class Conditions
 {
     public bool IsPositive( int number )
     {
-        return false;
+        return number >= 0;
     }
 
-	public bool EvenOdd( int number )
+	public bool IsEven( int number )
 	{
-		return false; 
+		return (number%2) == 0; 
 	}
 
 	public float Bigger( float number1, float number2 )
     {
-		return 0f;
+        if (number1 >= number2) return number1;
+        else return number2;
     }
 
     public bool CompareThreeNumbers( int a, int b, int c )
     {
-        return false;
+        return a == b || a == c;
     }
 
 	public bool OddAndMoreTen( int number )
     {
-		return true;
+		return number >= 10 && ! IsEven(number);
     }
 
 	public bool ThreeAndFive( int number )
     {
-		return true;
+		return number % 15 == 0;
     }
 
 	public bool IsMultiple( int number, int multiple )
     {
-		return true;
+		return number % multiple == 0;
     }
 
     public bool IsInRange( int number, int min, int max )
     {
-        return true;
+        return min <= number && number <= max;
     }
 
     public bool IsLeapYear( int year )
     {
-
+        if (year % 4 == 0)
+        {
+            if ( year % 100 == 0)
+            {
+                if (year % 400 == 0)
+                {
+                    return true;
+                }
+                return false;
+            }
+            return true;
+        }
         return false;
     }
 
     public bool IsTriangleRectangle( int a, int b, int c )
     {
-       return false;
+       return c*c == a*a + b*b;
     }
 
     public bool IsVowel( char letter )
     {
-
-        return false;
+        return letter == 'a' || letter == 'A' || letter == 'e' || letter == 'E' || letter == 'i' || letter == 'I' || letter == 'o' || letter == 'O' || letter == 'u' || letter == 'U' || letter == 'y' || letter == 'Y';
     }
 
     public int MaxOfThreeNumbers( int a, int b, int c )
     {
-        return 0;
+        int max = a;
+        if (b > max) max = b;
+        if (c > max) max = c;
+        return max;
     }
 }

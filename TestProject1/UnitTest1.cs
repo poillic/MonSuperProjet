@@ -144,13 +144,13 @@ namespace TestProject1
         }
 
         [TestMethod]
-        public void B_EvenOdd()
+        public void B_IsEven()
         {
             Conditions c = new Conditions();
-            Assert.IsTrue( c.EvenOdd( 12 ) );
-            Assert.IsTrue( c.EvenOdd( -120 ) );
-            Assert.IsFalse( c.EvenOdd( 97 ) );
-            Assert.IsFalse( c.EvenOdd( -67 ) );
+            Assert.IsTrue( c.IsEven( 12 ) );
+            Assert.IsTrue( c.IsEven( -120 ) );
+            Assert.IsFalse( c.IsEven( 97 ) );
+            Assert.IsFalse( c.IsEven( -67 ) );
         }
 
         [TestMethod]
@@ -337,8 +337,8 @@ namespace TestProject1
         {
             Loops l = new Loops();
             Assert.AreEqual( "1", l.GeneratePowerOfTwoString( 1 ) );
-            Assert.AreEqual( "1 2 4 8", l.GeneratePowerOfTwoString( 4 ) );
-            Assert.AreEqual( "1 2 4 8 16 32", l.GeneratePowerOfTwoString( 6 ) );
+            Assert.AreEqual("1\n2\n4\n8", l.GeneratePowerOfTwoString( 4 ) );
+            Assert.AreEqual("1\n2\n4\n8\n16\n32", l.GeneratePowerOfTwoString( 6 ) );
             Assert.AreEqual( "", l.GeneratePowerOfTwoString( 0 ) );
         }
     }
