@@ -1,14 +1,14 @@
 # Boucles
-Cette suite d'exercice est dédiée à l'apprentissage des boucles while, for, foreach.
+Cette suite d'exercice est dÃ©diÃ©e Ã  l'apprentissage des boucles while, for, foreach.
 
-# Afficher les nombres de 1 à 10
+# Afficher les nombres de 1 Ã  10
 
 Description:
-Écrivez une fonction nommée `ShowOneToTen` qui construit une chaîne de caractères avec les nombres de 1 à 10, séparés par des espaces. Utilisez une boucle `for` pour résoudre cet exercice.
+Ã‰crivez une fonction nommÃ©e `ShowOneToTen` qui construit une chaÃ®ne de caractÃ¨res avec les nombres de 1 Ã  10, sÃ©parÃ©s par des espaces. Utilisez une boucle `for` pour rÃ©soudre cet exercice.
 
 Contraintes:
-- Utilisez une boucle `for` pour itérer de 1 à 10 inclusivement.
-- Affichez chaque nombre avec un espace après sauf si il s'agit du dernier.
+- Utilisez une boucle `for` pour itÃ©rer de 1 Ã  10 inclusivement.
+- Affichez chaque nombre avec un espace aprÃ¨s sauf si il s'agit du dernier.
 
 Signature de la fonction:
 ```csharp
@@ -26,9 +26,9 @@ Sortie attendue:
 ```
 
 # Nombres Pairs
-Énoncé de l'exercice - Afficher les nombres pairs
+Ã‰noncÃ© de l'exercice - Afficher les nombres pairs
 
-Vous devez créer une fonction nommée `ShowEvenNumbers` qui prend en paramètre un entier positif `n` et retourne une chaîne de caractères contenant tous les nombres pairs de 0 à `n`, séparés par des espaces. Utilisez une boucle `for` pour résoudre cet exercice.
+Vous devez crÃ©er une fonction nommÃ©e `ShowEvenNumbers` qui prend en paramÃ¨tre un entier positif `n` et retourne une chaÃ®ne de caractÃ¨res contenant tous les nombres pairs de 0 Ã  `n`, sÃ©parÃ©s par des espaces. Utilisez une boucle `for` pour rÃ©soudre cet exercice.
 
 Voici la signature de la fonction :
 
@@ -37,32 +37,32 @@ public string ShowEvenNumbers(int n)
 ```
 
 Contraintes :
-- Le paramètre `n` est un entier positif représentant la limite supérieure des nombres pairs à afficher.
-- Utilisez une boucle `for` pour itérer de 0 à `n`.
-- À chaque itération, vérifiez si le nombre courant est pair en utilisant l'opérateur modulo (`%`). Si le reste de la division par 2 est égal à 0, le nombre est pair.
-- Si le nombre est pair, ajoutez-le à une chaîne de caractères avec un espace.
-- À la fin de la boucle, retournez la chaîne de caractères contenant tous les nombres pairs.
+- Le paramÃ¨tre `n` est un entier positif reprÃ©sentant la limite supÃ©rieure des nombres pairs Ã  afficher.
+- Utilisez une boucle `for` pour itÃ©rer de 0 Ã  `n`.
+- Ã€ chaque itÃ©ration, vÃ©rifiez si le nombre courant est pair en utilisant l'opÃ©rateur modulo (`%`). Si le reste de la division par 2 est Ã©gal Ã  0, le nombre est pair.
+- Si le nombre est pair, ajoutez-le Ã  une chaÃ®ne de caractÃ¨res avec un espace.
+- Ã€ la fin de la boucle, retournez la chaÃ®ne de caractÃ¨res contenant tous les nombres pairs.
 
 Exemple d'utilisation de la fonction :
 
 ```csharp
 int n1 = 10;
 string result1 = ShowEvenNumbers(n1);
-Console.WriteLine("Nombres pairs jusqu'à " + n1 + ": " + result1);
-// Affiche : "Nombres pairs jusqu'à 10: 0 2 4 6 8 10"
+Console.WriteLine("Nombres pairs jusqu'Ã  " + n1 + ": " + result1);
+// Affiche : "Nombres pairs jusqu'Ã  10: 0 2 4 6 8 10"
 
 int n2 = 5;
 string result2 = ShowEvenNumbers(n2);
-Console.WriteLine("Nombres pairs jusqu'à " + n2 + ": " + result2);
-// Affiche : "Nombres pairs jusqu'à 5: 0 2 4"
+Console.WriteLine("Nombres pairs jusqu'Ã  " + n2 + ": " + result2);
+// Affiche : "Nombres pairs jusqu'Ã  5: 0 2 4"
 ```
 
-Dans cet exemple, la fonction `ShowEvenNumbers` est appelée avec deux entiers différents. Dans le premier cas, `n` est égal à 10, ce qui signifie que les nombres pairs de 0 à 10 doivent être retournés sous forme de chaîne de caractères. Les nombres pairs de 0 à 10 sont 0, 2, 4, 6, 8 et 10. La fonction les retourne dans une chaîne de caractères séparés par un espace. Dans le deuxième cas, `n` est égal à 5, ce qui signifie que les nombres pairs de 0 à 5 doivent être retournés. Les nombres pairs de 0 à 5 sont 0, 2 et 4. La fonction les retourne également dans une chaîne de caractères séparés par un espace.
+Dans cet exemple, la fonction `ShowEvenNumbers` est appelÃ©e avec deux entiers diffÃ©rents. Dans le premier cas, `n` est Ã©gal Ã  10, ce qui signifie que les nombres pairs de 0 Ã  10 doivent Ãªtre retournÃ©s sous forme de chaÃ®ne de caractÃ¨res. Les nombres pairs de 0 Ã  10 sont 0, 2, 4, 6, 8 et 10. La fonction les retourne dans une chaÃ®ne de caractÃ¨res sÃ©parÃ©s par un espace. Dans le deuxiÃ¨me cas, `n` est Ã©gal Ã  5, ce qui signifie que les nombres pairs de 0 Ã  5 doivent Ãªtre retournÃ©s. Les nombres pairs de 0 Ã  5 sont 0, 2 et 4. La fonction les retourne Ã©galement dans une chaÃ®ne de caractÃ¨res sÃ©parÃ©s par un espace.
 
-À vous de coder la fonction `ShowEvenNumbers` en utilisant une boucle `for`, l'opérateur modulo et une structure de contrôle conditionnelle pour construire la chaîne de caractères contenant les nombres pairs de 0 à `n` selon les contraintes données.
+Ã€ vous de coder la fonction `ShowEvenNumbers` en utilisant une boucle `for`, l'opÃ©rateur modulo et une structure de contrÃ´le conditionnelle pour construire la chaÃ®ne de caractÃ¨res contenant les nombres pairs de 0 Ã  `n` selon les contraintes donnÃ©es.
 
 # Calculer la somme
-Vous devez créer une fonction nommée `CalculateSum` qui prend en paramètre un entier positif `n` et retourne la somme des entiers de 1 à `n`. Utilisez une boucle `while` pour résoudre cet exercice.
+Vous devez crÃ©er une fonction nommÃ©e `CalculateSum` qui prend en paramÃ¨tre un entier positif `n` et retourne la somme des entiers de 1 Ã  `n`. Utilisez une boucle `while` pour rÃ©soudre cet exercice.
 
 Voici la signature de la fonction :
 
@@ -71,34 +71,34 @@ public int CalculateSum(int n)
 ```
 
 Contraintes :
-- Le paramètre `n` est un entier positif représentant la limite supérieure des entiers à sommer.
-- Initialisez une variable `sum` à 0 qui va stocker la somme.
-- Initialiser une variable à 1 qui va stocker le nombre courant.
-- Utilisez une boucle `while` avec une condition pour itérer tant que le nombre courant est inférieur ou égal à `n`.
-- À chaque itération, ajoutez le nombre courant à la variable `sum`.
-- Augmentez le nombre courant de 1 à chaque itération.
-- À la fin de la boucle, retournez la valeur de `sum`.
+- Le paramÃ¨tre `n` est un entier positif reprÃ©sentant la limite supÃ©rieure des entiers Ã  sommer.
+- Initialisez une variable `sum` Ã  0 qui va stocker la somme.
+- Initialiser une variable Ã  1 qui va stocker le nombre courant.
+- Utilisez une boucle `while` avec une condition pour itÃ©rer tant que le nombre courant est infÃ©rieur ou Ã©gal Ã  `n`.
+- Ã€ chaque itÃ©ration, ajoutez le nombre courant Ã  la variable `sum`.
+- Augmentez le nombre courant de 1 Ã  chaque itÃ©ration.
+- Ã€ la fin de la boucle, retournez la valeur de `sum`.
 
 Exemple d'utilisation de la fonction :
 
 ```csharp
 int n1 = 5;
 int result1 = CalculateSum(n1);
-Console.WriteLine("La somme des entiers de 1 à " + n1 + " est : " + result1);
-// Affiche : "La somme des entiers de 1 à 5 est : 15"
+Console.WriteLine("La somme des entiers de 1 Ã  " + n1 + " est : " + result1);
+// Affiche : "La somme des entiers de 1 Ã  5 est : 15"
 
 int n2 = 10;
 int result2 = CalculateSum(n2);
-Console.WriteLine("La somme des entiers de 1 à " + n2 + " est : " + result2);
-// Affiche : "La somme des entiers de 1 à 10 est : 55"
+Console.WriteLine("La somme des entiers de 1 Ã  " + n2 + " est : " + result2);
+// Affiche : "La somme des entiers de 1 Ã  10 est : 55"
 ```
 
-Dans cet exemple, la fonction `CalculateSum` est appelée avec deux entiers différents. Dans le premier cas, `n` est égal à 5, ce qui signifie que la somme des entiers de 1 à 5 doit être calculée. La somme des entiers de 1 à 5 est égale à 1 + 2 + 3 + 4 + 5 = 15. La fonction retourne donc la valeur 15. Dans le deuxième cas, `n` est égal à 10, ce qui signifie que la somme des entiers de 1 à 10 doit être calculée. La somme des entiers de 1 à 10 est égale à 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55. La fonction retourne donc la valeur 55.
+Dans cet exemple, la fonction `CalculateSum` est appelÃ©e avec deux entiers diffÃ©rents. Dans le premier cas, `n` est Ã©gal Ã  5, ce qui signifie que la somme des entiers de 1 Ã  5 doit Ãªtre calculÃ©e. La somme des entiers de 1 Ã  5 est Ã©gale Ã  1 + 2 + 3 + 4 + 5 = 15. La fonction retourne donc la valeur 15. Dans le deuxiÃ¨me cas, `n` est Ã©gal Ã  10, ce qui signifie que la somme des entiers de 1 Ã  10 doit Ãªtre calculÃ©e. La somme des entiers de 1 Ã  10 est Ã©gale Ã  1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55. La fonction retourne donc la valeur 55.
 
-À vous de coder la fonction `CalculateSum` en utilisant une boucle `while` et une variable de somme pour calculer la somme des entiers de 1 à `n` selon les contraintes données.
+Ã€ vous de coder la fonction `CalculateSum` en utilisant une boucle `while` et une variable de somme pour calculer la somme des entiers de 1 Ã  `n` selon les contraintes donnÃ©es.
 
 # Factorielle
-Écrivez une fonction nommée `CalculateFactorial` qui prend en paramètre un entier positif `n` et retourne le factoriel de `n`. Le factoriel d'un nombre `n` est le produit de tous les entiers positifs de 1 à `n`.
+Ã‰crivez une fonction nommÃ©e `CalculateFactorial` qui prend en paramÃ¨tre un entier positif `n` et retourne le factoriel de `n`. Le factoriel d'un nombre `n` est le produit de tous les entiers positifs de 1 Ã  `n`.
 
 Voici la signature de la fonction :
 
@@ -112,10 +112,10 @@ int result = CalculateFactorial(5);
 Console.WriteLine(result); // Affiche 120
 ```
 
-Dans cet exercice, vous devez calculer le factoriel d'un nombre `n`. Le factoriel d'un nombre `n` est obtenu en multipliant tous les entiers positifs de 1 à `n`. Par exemple, le factoriel de 5 (représenté par `5!`) est égal à 1 * 2 * 3 * 4 * 5, soit 120. La fonction doit retourner le résultat du calcul.
+Dans cet exercice, vous devez calculer le factoriel d'un nombre `n`. Le factoriel d'un nombre `n` est obtenu en multipliant tous les entiers positifs de 1 Ã  `n`. Par exemple, le factoriel de 5 (reprÃ©sentÃ© par `5!`) est Ã©gal Ã  1 * 2 * 3 * 4 * 5, soit 120. La fonction doit retourner le rÃ©sultat du calcul.
 
 # Compter les voyelles
-Vous devez créer une fonction nommée `CountVowels` qui prend en paramètre une chaîne de caractères `text` et compte le nombre de voyelles (a, e, i, o, u) présentes dans la chaîne. Utilisez une boucle `foreach` pour résoudre cet exercice.
+Vous devez crÃ©er une fonction nommÃ©e `CountVowels` qui prend en paramÃ¨tre une chaÃ®ne de caractÃ¨res `text` et compte le nombre de voyelles (a, e, i, o, u) prÃ©sentes dans la chaÃ®ne. Utilisez une boucle `foreach` pour rÃ©soudre cet exercice.
 
 Voici la signature de la fonction :
 
@@ -124,33 +124,33 @@ public int CountVowels(string text)
 ```
 
 Contraintes :
-- Le paramètre `text` est une chaîne de caractères dans laquelle vous devez compter les voyelles.
-- Initialisez une variable `count` à 0 qui va stocker le nombre de voyelles.
-- Utilisez une boucle `foreach` pour parcourir chaque caractère de la chaîne `text`.
-- À chaque itération, vérifiez si le caractère courant est une voyelle (a, e, i, o, u), en utilisant une condition avec l'opérateur `||` pour combiner plusieurs comparaisons.
-- Si le caractère courant est une voyelle, augmentez la valeur de `count` de 1.
-- À la fin de la boucle, retournez la valeur de `count`.
+- Le paramÃ¨tre `text` est une chaÃ®ne de caractÃ¨res dans laquelle vous devez compter les voyelles.
+- Initialisez une variable `count` Ã  0 qui va stocker le nombre de voyelles.
+- Utilisez une boucle `foreach` pour parcourir chaque caractÃ¨re de la chaÃ®ne `text`.
+- Ã€ chaque itÃ©ration, vÃ©rifiez si le caractÃ¨re courant est une voyelle (a, e, i, o, u), en utilisant une condition avec l'opÃ©rateur `||` pour combiner plusieurs comparaisons.
+- Si le caractÃ¨re courant est une voyelle, augmentez la valeur de `count` de 1.
+- Ã€ la fin de la boucle, retournez la valeur de `count`.
 
 Exemple d'utilisation de la fonction :
 
 ```csharp
 string text1 = "Hello, world!";
 int result1 = CountVowels(text1);
-Console.WriteLine("Le nombre de voyelles dans la chaîne '" + text1 + "' est : " + result1);
-// Affiche : "Le nombre de voyelles dans la chaîne 'Hello, world!' est : 3"
+Console.WriteLine("Le nombre de voyelles dans la chaÃ®ne '" + text1 + "' est : " + result1);
+// Affiche : "Le nombre de voyelles dans la chaÃ®ne 'Hello, world!' est : 3"
 
 string text2 = "Programming is fun!";
 int result2 = CountVowels(text2);
-Console.WriteLine("Le nombre de voyelles dans la chaîne '" + text2 + "' est : " + result2);
-// Affiche : "Le nombre de voyelles dans la chaîne 'Programming is fun!' est : 5"
+Console.WriteLine("Le nombre de voyelles dans la chaÃ®ne '" + text2 + "' est : " + result2);
+// Affiche : "Le nombre de voyelles dans la chaÃ®ne 'Programming is fun!' est : 5"
 ```
 
-Dans cet exemple, la fonction `CountVowels` est appelée avec deux chaînes de caractères différentes. Dans le premier cas, la chaîne `text1` est "Hello, world!". La fonction compte le nombre de voyelles dans cette chaîne et trouve qu'il y en a 3 (o, o, e). La fonction retourne donc la valeur 3. Dans le deuxième cas, la chaîne `text2` est "Programming is fun!". La fonction compte le nombre de voyelles dans cette chaîne et trouve qu'il y en a 5 (o, a, i, i, u). La fonction retourne donc la valeur 5.
+Dans cet exemple, la fonction `CountVowels` est appelÃ©e avec deux chaÃ®nes de caractÃ¨res diffÃ©rentes. Dans le premier cas, la chaÃ®ne `text1` est "Hello, world!". La fonction compte le nombre de voyelles dans cette chaÃ®ne et trouve qu'il y en a 3 (o, o, e). La fonction retourne donc la valeur 3. Dans le deuxiÃ¨me cas, la chaÃ®ne `text2` est "Programming is fun!". La fonction compte le nombre de voyelles dans cette chaÃ®ne et trouve qu'il y en a 5 (o, a, i, i, u). La fonction retourne donc la valeur 5.
 
-À vous de coder la fonction `CountVowels` en utilisant une boucle `foreach` et une variable de comptage pour déterminer le nombre de voyelles dans la chaîne `text` selon les contraintes données.
+Ã€ vous de coder la fonction `CountVowels` en utilisant une boucle `foreach` et une variable de comptage pour dÃ©terminer le nombre de voyelles dans la chaÃ®ne `text` selon les contraintes donnÃ©es.
 
-# Les étoiles
-Écrivez une fonction nommée `PrintStars` qui prend en paramètre un entier positif `n` et retourne une chaîne de caractères contenant `n` étoiles (*).
+# Les Ã©toiles
+Ã‰crivez une fonction nommÃ©e `PrintStars` qui prend en paramÃ¨tre un entier positif `n` et retourne une chaÃ®ne de caractÃ¨res contenant `n` Ã©toiles (*).
 
 Voici la signature de la fonction :
 
@@ -164,10 +164,10 @@ string result = PrintStars(5);
 Console.WriteLine(result); // Affiche "*****"
 ```
 
-Dans cet exercice, vous devez générer une chaîne de caractères contenant `n` étoiles, en les séparant par un espace. Par exemple, si `n` est égal à 5, la fonction doit renvoyer la chaîne "*****".
+Dans cet exercice, vous devez gÃ©nÃ©rer une chaÃ®ne de caractÃ¨res contenant `n` Ã©toiles, en les sÃ©parant par un espace. Par exemple, si `n` est Ã©gal Ã  5, la fonction doit renvoyer la chaÃ®ne "*****".
 
 # Un sur deux
-Écrivez une fonction nommée `AlternativePrint` qui prend en paramètres un entier positif `n`, un caractère `first` et un caractère `second`. La fonction retourne une chaîne de caractères où les caractères `first` et `second` alternent en fonction de l'indice de la boucle. Si l'indice est pair, le caractère `first` est ajouté à la chaîne, sinon le caractère `second` est ajouté.
+Ã‰crivez une fonction nommÃ©e `AlternativePrint` qui prend en paramÃ¨tres un entier positif `n`, un caractÃ¨re `first` et un caractÃ¨re `second`. La fonction retourne une chaÃ®ne de caractÃ¨res oÃ¹ les caractÃ¨res `first` et `second` alternent en fonction de l'indice de la boucle. Si l'indice est pair, le caractÃ¨re `first` est ajoutÃ© Ã  la chaÃ®ne, sinon le caractÃ¨re `second` est ajoutÃ©.
 
 Voici la signature de la fonction :
 
@@ -181,16 +181,17 @@ string result = AlternativePrint(7, '*', '-');
 Console.WriteLine(result); // Affiche "*-*-*-*"
 ```
 
-Dans cet exercice, vous devez générer une chaîne de caractères de longueur `n` où les caractères `first` et `second` alternent. Si l'indice de la boucle est pair, vous devez ajouter le caractère `first` à la chaîne, sinon vous devez ajouter le caractère `second`. Par exemple, si `n` est égal à 7, `first` est le caractère "*" et `second` est le caractère "-", la fonction doit renvoyer la chaîne "*-+-+-+-".
+Dans cet exercice, vous devez gÃ©nÃ©rer une chaÃ®ne de caractÃ¨res de longueur `n` oÃ¹ les caractÃ¨res `first` et `second` alternent. Si l'indice de la boucle est pair, vous devez ajouter le caractÃ¨re `first` Ã  la chaÃ®ne, sinon vous devez ajouter le caractÃ¨re `second`. Par exemple, si `n` est Ã©gal Ã  7, `first` est le caractÃ¨re "*" et `second` est le caractÃ¨re "-", la fonction doit renvoyer la chaÃ®ne "*-+-+-+-".
 
-# Générer une chaîne des puissances de 2
+# GÃ©nÃ©rer une chaÃ®ne des puissances de 2
 
 Description:
-Écrivez une fonction nommée `GeneratePowerOfTwoString` qui prend en paramètre un entier positif `n`. Cette fonction doit générer et retourner une chaîne de caractères contenant les `n` premières puissances de 2, séparées par des sauts de ligne.
+Ã‰crivez une fonction nommÃ©e `GeneratePowerOfTwoString` qui prend en paramÃ¨tre un entier positif `n`. Cette fonction doit gÃ©nÃ©rer et retourner une chaÃ®ne de caractÃ¨res contenant les `n` premiÃ¨res puissances de 2, sÃ©parÃ©es par des sauts de ligne.
 
 Contraintes:
-- Utilisez une boucle `do-while` pour résoudre cet exercice.
-- Utilisez le caractère spéciale '\n' pour faire des sauts de ligne.
+- Utilisez une boucle `do-while` pour rÃ©soudre cet exercice.
+- Utilisez le caractÃ¨re spÃ©ciale '\n' pour faire des sauts de ligne.
+- Si le paramÃ¨tre est 0 il faut renvoyer "" ( chaine de caractÃ¨res vide )
 
 Signature de la fonction:
 ```csharp
@@ -212,4 +213,4 @@ Sortie attendue:
 16
 ```
 
-Dans cet exemple, la fonction `GeneratePowerOfTwoString` est appelée avec `n` égal à 5. Elle génère une chaîne de caractères contenant les cinq premières puissances de 2 (1, 2, 4, 8, 16) séparées par des sauts de ligne. La chaîne résultante est ensuite affichée à l'aide de la fonction `Console.WriteLine`.
+Dans cet exemple, la fonction `GeneratePowerOfTwoString` est appelÃ©e avec `n` Ã©gal Ã  5. Elle gÃ©nÃ¨re une chaÃ®ne de caractÃ¨res contenant les cinq premiÃ¨res puissances de 2 (1, 2, 4, 8, 16) sÃ©parÃ©es par des sauts de ligne. La chaÃ®ne rÃ©sultante est ensuite affichÃ©e Ã  l'aide de la fonction `Console.WriteLine`.
