@@ -147,7 +147,7 @@ public float CalculateBMI(float height, float mass)
 
 Contraintes :
 - Les paramètres `height` et `mass` sont des nombres de type `float` représentant respectivement la taille (en mètres) et le poids (en kilogrammes) de la personne.
-- La formule à utiliser est : BMI = height / (mass * mass)
+- La formule à utiliser est : BMI = mass / (height * height)
 
 Exemple d'utilisation de la fonction :
 
